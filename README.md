@@ -35,8 +35,11 @@ $$
 $$
 
 $\alpha$ e $\beta$: intensidade da competição de uma população sobre a outra;
+
 $r_x$ e $r_y$: taxas de crescimento intrínseco;
+
 $r_d$: taxa de morte induzida pelo fármaco, que age apenas sobre as sensíveis;
+
 $K_A\in\{0,1\}$: indica se o fármaco está desligado ou ligado.
 
 #### Terapia intermitente. 
@@ -44,12 +47,15 @@ Com $V=x+y$ o volume tumoral total, o fármaco liga quando $V$ atinge $A$ e desl
 
 #### Cenários de competição
 Cenário 1 ($\alpha<1$, $\beta>1$): as sensíveis são as competidoras mais fortes.
+
 Cenário 2 ($\alpha>1$, $\beta<1$): as resistentes são as competidoras mais fortes.
 
 ## Abordagens apresentadas 
 
 - Análise analítica: equilíbrios (interseções das isóclinas nulas) e estabilidade local pelos autovalores da matriz Jacobiana;
+  
 - Análise numérica: método de Runge-Kutta de ordem 4, passo fixo $\Delta t=0{,}01$, com $K_A$ constante em cada passo, implementado em Python (NumPy e Matplotlib);
+  
 - Visualização: séries temporais, planos de fase com isóclinas, campos de direções e trajetórias.
 
 O sistema é não linear e acoplado, e na terapia intermitente $K_A$ depende da própria solução, de modo que as trajetórias são obtidas numericamente.
@@ -58,7 +64,9 @@ O sistema é não linear e acoplado, e na terapia intermitente $K_A$ depende da 
 O desenvolvimento do projeto se deu com o uso da linguagem de programação Python (3.13.7), contando com as seguintes bibliotecas:
 
 - NumPy (2.2.6): manipulação de arrays e operações matemáticas;
+  
 - Pandas (2.3.3): organização dos resultados em tabelas
+  
 - Matplotlib (3.10.6): visualizações gráficas
 
 ## Acesso ao trabalho
